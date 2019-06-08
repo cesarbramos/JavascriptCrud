@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="theme-color" content="crimson">
+	<title>CRUD JavaScript[jquery]</title>
+	<link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="static/css/main.css">
+</head>
+<body>
+	
+	<div id="root" class="container py-4">
+		<div class="row">
+			<div class="col-md-10 offset-md-1">
+				<div class="card">
+					<div class="card-header text-dark text-center">
+						<span class="h5">FACTURA</span>
+					</div>
+					<div class="card-body body-mother">
+						<div class="">
+							<div class="card mb-3">
+								<div class="card-header bg-dark text-light text-center">
+									<span class="h6">DATOS PERSONALES</span>
+								</div>
+								<div class="card-body form-row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<input type="text" name=""class="form-control" placeholder="NOMBRES:">
+										</div>
+										<div class="form-group">
+											<input type="text" name=""class="form-control" placeholder="APELLIDOS:">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<input type="number" class="form-control" placeholder="IDENTIFICACION">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="card">
+							<div class="card-header bg-dark text-light text-center">
+								<span class="h6">PRODUCTOS</span>
+							</div>
+							<form id="formProduct">
+								<div class="card-body form-row p-3" id="cardProductos">
+									<div class="col-md-2 text-center">
+										<div class="form-group">
+											<input class="form-control" type="text" id="id" placeholder="ID" />
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<input class="form-control" type="text" id="descripcion" placeholder="DESCRIPCIÓN" />
+										</div>
+									</div>
+									<div class="col-md-2">
+										<div class="form-group">
+											<input class="form-control result" type="text" id="precio" placeholder="PRECIO" />
+										</div>
+									</div>
+									<div class="col-md-1">
+										<div class="form-group">
+											<input class="form-control result" type="text" id="cant" placeholder="CANT" />
+										</div>
+									</div>
+									<div class="col-md-2">
+										<div class="form-group">
+											<input class="form-control total" type="text" id="total" placeholder="TOTAL" readonly/>
+										</div>
+									</div>
+									<div class="col-md-1">
+										<div class="form-group">
+											<input class="btn btn-info btn-block mr-1" id="addItem" type="submit" value="Add">
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+
+						<div class="card mt-3">
+							<div class="card-header bg-dark text-center text-light">
+								<span class="h6">AGREGADOS <span class="badge badge-pill badge-light" id="contador">1</span> </span>
+							</div>
+							<div class="card-body">
+								<div class="table-responsive-md">
+									<table class="table table-striped table-md">
+										<thead>
+											<tr class="bg-light text-center">
+												<td>ID</td>
+												<td>DESCRIPCIÓN</td>
+												<td>PRECIO</td>
+												<td>CANTIDAD</td>
+												<td>TOTAL</td>
+												<td></td>
+											</tr>
+										</thead>
+										<tbody class="text-center" id="tbody">
+											<tr>
+												<td>1</td>
+												<td>SUETER BEIGE</td>
+												<td>15000</td>
+												<td>1</td>
+												<td>15000</td>
+												<td>
+													<button class="btn btn-danger btn-sm product-delete">x</button>
+													<button class="btn btn-primary btn-sm product-edit">e</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="static/js/popper.js"></script>
+	<script type="text/javascript" src="static/js/app.js"></script>
+</body>
+</html>
